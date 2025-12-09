@@ -18,6 +18,34 @@
             min-height: 100vh;
             position: relative;
             overflow: hidden;
+            <!-- Countdown Timer START -->
+<div id="countdown"
+     style="text-align:center; font-size: 28px; font-weight:bold; color:white; margin-top:20px;">
+    Loading timer...
+</div>
+
+<script>
+// Total countdown time: 29 days 22 hours
+let totalSeconds = (29 * 24 * 3600) + (22 * 3600);
+
+function updateCountdown() {
+    let days = Math.floor(totalSeconds / (3600 * 24));
+    let hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+    let minutes = Math.floor((totalSeconds % 3600) / 60);
+    let seconds = totalSeconds % 60;
+
+    document.getElementById("countdown").innerHTML =
+        `Time Left: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    if (totalSeconds > 0) {
+        totalSeconds--;
+    }
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+<!-- Countdown Timer END -->
         }
         
         body::before {
