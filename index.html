@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Required</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff3b3b, #7a00ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .card {
+            background: rgba(0,0,0,0.55);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 18px;
+            width: 92%;
+            max-width: 420px;
+            box-shadow: 0 0 25px rgba(0,0,0,0.4);
+            animation: pop 0.5s ease-out;
+        }
+        @keyframes pop {
+            from { transform: scale(0.7); opacity: 0; }
+            to   { transform: scale(1); opacity: 1; }
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+            font-weight: 800;
+            color: #ffea00;
+        }
+        p {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+        .number {
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 10px;
+            color: #00ff9d;
+        }
+        .pay-box {
+            margin-top: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 12px;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0 5px 0;
+        }
+        .logos img {
+            width: 70px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>⚠️ Payment Required</h1>
+        <p>এই অ্যাপ ব্যবহার করতে হলে আগে পেমেন্ট করতে হবে।</p>
+
+        <div class="pay-box">
+            <div class="logos">
+                <img src="https://i.ibb.co/5FqVbtB/bkash.png" alt="Bkash" />
+                <img src="https://i.ibb.co/2F5qxYv/nagad.png" alt="Nagad" />
+            </div>
+            <p class="number">📞 01892564963</p>
+            <p>বিকাশ / নগদ — উভয়েই পেমেন্ট গ্রহণযোগ্য</p>
+        </div>
+
+        <p style="margin-top:15px; opacity:0.9; font-size:14px;">পেমেন্ট না করা পর্যন্ত কোনো ফিচার অ্যাক্সেস করা যাবে না।</p>
+    </div>
+</body>
+</html>
